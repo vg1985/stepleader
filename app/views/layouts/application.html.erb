@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Oscar:StepLeader</title>
+		<link id="bs-css" href="/assets/bootstrap-cerulean.css" rel="stylesheet">
+		<style type="text/css">
+			body {
+				padding-bottom: 40px;
+			}
+			.sidebar-nav {
+				padding: 9px 0;
+			}
+		</style>
+		<link href="/assets/bootstrap-responsive.css" rel="stylesheet">
+		<link href="/assets/stepleader-app.css" rel="stylesheet">
+		<link href="/assets/jquery-ui-1.8.21.custom.css" rel="stylesheet">
+		<link href='/assets/fullcalendar.css' rel='stylesheet'>
+		<link href='/assets/fullcalendar.print.css' rel='stylesheet'  media='print'>
+		<link href='/assets/chosen.css' rel='stylesheet'>
+		<link href='/assets/uniform.default.css' rel='stylesheet'>
+		<link href='/assets/colorbox.css' rel='stylesheet'>
+		<link href='/assets/jquery.cleditor.css' rel='stylesheet'>
+		<link href='/assets/jquery.noty.css' rel='stylesheet'>
+		<link href='/assets/noty_theme_default.css' rel='stylesheet'>
+		<link href='/assets/elfinder.min.css' rel='stylesheet'>
+		<link href='/assets/elfinder.theme.css' rel='stylesheet'>
+		<link href='/assets/jquery.iphone.toggle.css' rel='stylesheet'>
+		<link href='/assets/opa-icons.css' rel='stylesheet'>
+		<link href='/assets/uploadify.css' rel='stylesheet'>
+
+		<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- The fav icon -->
+		<link rel="shortcut icon" href="img/favicon.ico">
+
+	</head>
+
+	<body>
+		<!-- topbar starts -->
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+
+					<a class="brand" href="index.html"> <%= image_tag "ocsar.gif"%> <span style="margin-top:15px;">StepLeader</span></a>
+
+					<div class="pull-right" style="margin-top:25px;">
+
+						<span style="font-size: 15px;"><b>Welcome admin</span>
+						<span style="font-size: 15px;padding-left:10px;"><b><%= link_to "Logout", logout_path, :style => "color:#ffffff" %></span>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- topbar ends -->
+		<div class="container-fluid">
+			<div class="row-fluid">
+
+				<!-- left menu starts -->
+				<div class="span2 main-menu-span">
+					<div class="well nav-collapse sidebar-nav">
+						<ul class="nav nav-tabs nav-stacked main-menu">
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Setup New Customer</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Edit Current Cutomsers</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-list-alt"></i><span class="hidden-tablet">Setup Scoring For Cutomers</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-move"></i><span class="hidden-tablet"> Email Cutomers</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-picture"></i><span class="hidden-tablet">View Applicants</span></a>
+							</li>
+							<li>
+								<a class="ajax-link" href="#"><i class="icon-share"></i><span class="hidden-tablet">Reports</span></a>
+							</li>
+						</ul>
+					</div><!--/.well -->
+				</div><!--/span-->
+				<!-- left menu ends -->
+
+				<div id="content" class="span10">
+					<!-- content starts -->
+					<div>
+						<ul class="breadcrumb">
+
+							<li>
+								<a href="#">Dashboard</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sortable row-fluid">
+						<a data-rel="tooltip" title="6 new members." class="well span3 top-block" href="#"> <span class="icon32 icon-red icon-user"></span>
+						<div>
+							Total Cutomers
+						</div>
+						<div>
+							507
+						</div> </a>
+
+						<a data-rel="tooltip" title="$34 new sales." class="well span3 top-block" href="#"> <span class="icon32 icon-color icon-cart"></span>
+						<div>
+							Total Applicants
+						</div>
+						<div>
+							13320
+						</div> </a>
+
+					</div>
+
+					<div class="row-fluid">
+						<div class="box span12">
+							<div class="box-header well">
+								<h2><i class="icon-info-sign"></i> Introduction</h2>
+								
+							</div>
+							<div class="box-content">
+								<p>
+									Small description about the application can go here.
+								</p>
+
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+
+					<footer>
+						<p class="pull-left">
+							&copy; <a href="#" target="_blank">OSCAR</a> <%= Time.now.year%>
+						</p>
+						<p class="pull-right">
+							Powered by: <a href="#">StepLeader</a>
+						</p>
+					</footer>
+
+				</div>
+	</body>
+</html>
