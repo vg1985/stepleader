@@ -3,5 +3,7 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+  # cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#User.create([{ email: 'admin@admin.com' }, { password: 'admin' }, {created_at: Time.now}, {updated_at: Time.now}])
+User.create(:email => 'admin@admin.com', :password => 'admin', :created_at => Time.now, :updated_at => Time.now)
