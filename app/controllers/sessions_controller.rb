@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
         if session[:role] == User::ADMIN
           redirect_to dashboard_path
         else
+          redirect_to dashboard_path
           #TODO  
         end
         
