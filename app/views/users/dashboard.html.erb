@@ -11,3 +11,17 @@
     </ul>
     </div>
     </div>
+    <% unless @contact_view %>
+  <p><span class="phone-num"><%= "Primary" if phone.primary? %> Phone Number: </span>
+    <%= render partial: '/phones/delete_phone', locals: {phone: phone, location: 'profile'} unless phone.is_primary? %>
+    <a href="javascript:;" title="Edit" target="_parent" class="edit-icon btn-user-phone-popup">
+      <i class="fa fa-edit" ></i>
+    </a>
+    <span class="btn-user-phone-popup" id="primary_phone_number">
+      <%= render partial: '/users/privacy_setting_image', locals: {code: phone.privacy_settings}%>
+    </span>
+  </p>
+<% end %>
+<div id="phone-contact-info">
+  <p><span><%= phone.phone_type.name %>:</span><%= phone.number %></p>
+</div>
